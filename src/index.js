@@ -1,17 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Header() {
+  return (
+    <>
+    <header>
+      <nav className="d-flex">
+        <img src="logo512.png" alt="1" className="nav-img"/>
+        <ul className="nav-items d-flex">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    </>
+  );
+}
+function MainContent() {
+  return (
+    <>
+      <h1>Reasons I am exited to learn React</h1>
+      <ol>
+        <li>Reason 1</li>
+        <li>Reason 2</li>
+        <li>Reason 3</li>
+        <li>Reason 4</li>
+      </ol>
+    </>
+  );
+}
+function Footer() {
+  return (
+    <>
+      <footer>
+        <small> Erik All rights reserved</small>
+      </footer>
+    </>
+  );
+}
+
+function TempName() {
+  return (
+    <>
+      <Header />
+      <MainContent />
+      <Footer />
+    </>
+  );
+}
+ReactDOM.render(<TempName />, document.querySelector("#root"));
